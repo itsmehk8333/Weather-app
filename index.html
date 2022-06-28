@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head></head>
+<link rel="stylesheet" href="index.css`">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #fafafa;
+        }
+#main-div{
+    margin:7rem 0 0 28rem ;
+    border: 1px solid black;
+    width: 15rem;
+    height: 15rem;
+    padding:  2rem 5rem 5rem 5rem;
+border-radius: 10px ;
+    background-color: #c8e6c9       ;
+}
+#username{
+    border-radius: 10px;
+    border: 1px solid black;
+    width: 15em;
+    height: 1.5rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+color:black;
+}
+#password{
+    border-radius: 10px;
+    border: 1px solid black;
+    width: 15em;
+    height: 1.5rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+#login-title{
+    color: #795548;
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#button{
+    width: 10rem;
+    height: 2rem;
+    text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 10px;
+  letter-spacing: 4px;
+  position: relative;
+  background-color: #16a085;
+  border: none;
+  color: #fff;
+ 
+  width: 200px;
+  text-align: center;
+  transition-duration: 0.4s;
+  overflow: hidden;
+  box-shadow: 0 5px 15px #193047;
+  border-radius: 4px;
+  
+}
+#button:hover {
+  background: #fff;
+  box-shadow: 0px 2px 10px 5px #1abc9c;
+  color: #000;
+}
+
+#button:after {
+  content: "";
+  background: #1abc9c;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+#button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+
+#button:focus { outline:0; }
+#span{
+    color:red
+}
+    </style>
+</head>
+<body>
+    <div id="main-div">
+        <h1 id="login-title"> LOGIN </h1>
+        <input type="text" id="username" placeholder="  Enter the username"/> <br /><br/>
+        <input type="password" id="password" placeholder="  Enter the password" /><br/>
+        <span id="span"></span>
+        <br/><br/>
+        <a href="#"  id="link"><button onclick="logedin()"  id="button"> LOGIN</button>   </a> 
+    </div>
+</body>
+<script>
+var value = "login"
+function logedin()
+{
+var username = document.getElementById("username").value;
+var password = document.getElementById("password").value;
+if(username == "" || password == ""){
+document.getElementById("span").innerText= "Please enter the username and password"
+} 
+else if(username == "hari" && password =="1234" ){
+ var link = document.getElementById("link");
+ link.href = "weather.html"
+}else{
+    document.getElementById("span").innerText= "Please enter the username and password corretly"
+}
+}
+</script>
+</html>
